@@ -50,7 +50,7 @@ const Dropdown = ({ children, defaultChild, simple }) => {
       <div className={styles.dropdown} ref={dropDownRef}>
         <div
           className={`${styles.dropdown_box} ${open && styles.active} ${
-            styles.simple
+            simple && styles.simple
           }`}
           onClick={() => setOpen((status) => !status)}
         >
