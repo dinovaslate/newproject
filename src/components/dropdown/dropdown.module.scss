@@ -1,0 +1,62 @@
+@import url(../../assets/fonts/EquitanSans/main.scss);
+*{
+    font-family: EQS;
+    font-weight: 400;
+}
+
+.dropdown{
+    position: relative;
+    &_box{
+        background-color: rgb(241, 236, 236);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-width: 180px;
+        padding: 1rem 1.3rem;
+        border-radius: 10px;
+        &.active{
+            border-radius: 10px 10px 0 0;
+        }
+        color: #696969;
+        transition: .4s ease;
+        &:hover, &:focus{
+            background-color: rgb(209, 207, 207);
+        }
+        &.active > .dropdown_arrow{
+            transform: rotate(540deg);
+        }
+        & .simple{
+            background-color: red;
+        }
+    }
+    
+    &_arrow{
+        transition: .3s ease-in;
+    }
+    &_header{
+        font-weight: 800;
+    }
+    &_menulist{
+        position: absolute;
+        top: 95%;
+        box-shadow: 0 2px 3px 0 rgb(34 36 38 / 15%);
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+        background-color: white;
+        overflow: hidden;
+        max-height: 0;
+        transition: .3s ease;
+        &.active{
+            max-height: var(--maxHeight);
+        }
+        & > *{
+            padding: .7rem 1rem;
+            background-color: var(--bg, none);
+            color: var(--text, black);
+            &:hover{
+                background-color: #5c5b5ba3;
+                color: white;
+            }
+        }
+    }
+}

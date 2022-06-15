@@ -1,0 +1,123 @@
+.scoreboard{
+    &_header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        .header{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .title{
+                font-weight: bold;
+                font-size: 1.3rem;
+            }
+            .subtitle{
+                font-weight: 600;
+                color: #c6c8cc;
+                white-space: nowrap;
+            }
+        }
+        .status{
+            background-color:#f6e0e6 ;
+            color: #a85c5e;
+            padding: .5rem 1rem;
+            display: grid;
+            place-content: center;
+            font-weight: bold;
+        }
+    }
+
+    &_main{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.3rem;
+    }
+    &_team{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        .image{
+            width: 90px;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            align-self: flex-end;
+        }
+        .name{
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            white-space: nowrap;
+        }
+    }
+    &_score, &_divider{
+        font-weight: bold;
+        font-size: 2.3rem;
+    }
+    &_action{
+        margin-top: 1.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: stretch;
+        gap: 0.8rem;
+        width: 100%;
+        
+        .primary_action{
+            background-color: #5b1bed;
+            padding: 0.9rem 1rem;
+            color: white;
+            border-radius: 10px; 
+            flex: 2;
+            text-align: center;
+            font-weight: 800;
+        }
+        .secondary_action{
+            background-color: #c8c8c8;
+            padding: 0.9rem 1rem;
+            color: white;
+            border-radius: 10px; 
+            font-weight: 800;
+            flex: 1;
+            text-align: center;
+        }
+    }
+    &_timeline{
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+     .section_header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .header{
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+       }
+     
+    }
+    &_matches{
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    &_grid{
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr 1fr 2fr 1fr 2fr;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.1rem;
+        & > *{
+            font-weight: 500;
+            text-align: center;
+            color: #adacaf;
+        }
+        
+
+    }
+}

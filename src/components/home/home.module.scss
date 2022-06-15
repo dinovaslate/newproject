@@ -1,0 +1,115 @@
+@import url(../../assets/fonts/EquitanSans/main.scss);
+*{
+    font-family: EQS;
+    font-weight: 400;
+}
+
+.container{
+    display: flex;
+    padding: 1rem;
+    .primary_layout{
+       flex: 2.9;
+       display: flex;
+       flex-direction: column;
+       gap: 2.5rem;
+       .jumbotron{
+            width: 100%;
+            height: 400px;
+            background-image: url('./jumbotron.jpg');
+            background-position: bottom right;
+            border-radius: 20px;
+            position: relative;
+            z-index: 1;
+            isolation: isolate;
+            overflow: hidden;
+            .jumbotron_content{
+                height: 400px;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    background-color: #8350f9;
+                    border-radius: 20px;
+                    mix-blend-mode:color-burn ;
+                    z-index: -1;
+                }
+                display: flex;
+                .jumbotron_image{
+                    flex: 1;
+                    .image{
+                        transform: scale(1.1);
+                        filter: hue-rotate(90deg) brightness(90%);
+                    }
+                }
+                .content{
+                    flex: 1;
+                    display: flex;
+                    padding-inline-end: 2rem;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 1rem;
+                    .logo{
+                        height: fit-content;
+                       img{
+                        width: 130px;
+                        height: 30px;
+                        object-fit: cover;
+                        position: relative;
+                        margin-left: -20px;
+                       }
+                    }
+                    .title{
+                        font-size: 2rem;
+                        font-weight: 600;
+                        color: white;
+                    }
+                    .subtitle{
+                        font-size: 1rem;
+                        font-weight: 200;
+                        color: white;
+                    }
+                    .button{
+                        background:white;
+                        width: fit-content;
+                        padding: 0.7rem 1.3rem;
+                        font-weight: 900;
+                        color: #8350f9;
+                        border-radius: 10px;
+                    }
+                }
+            }
+       }
+       .section_header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .header{
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+       }
+    }
+    .secondary_layout{
+       flex: 1;
+       padding-inline: 1rem;
+       gap: 1rem;
+       display: flex;
+       flex-direction: column;
+    }
+}
+
+.card_title{
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-top: 20px;
+}
+.card_subtitle{
+    font-weight: 600;
+    color: #a6a5aa;
+}
+.card_grid{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 1rem;
+}
